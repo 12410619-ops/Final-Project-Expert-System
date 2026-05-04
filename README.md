@@ -1,11 +1,11 @@
-# 📰 RAG News Analyzer
+#  RAG News Analyzer
 
 **Sistem Analisis Berita berbasis Retrieval-Augmented Generation (RAG)**  
 Menggabungkan kemampuan pencarian semantik, basis data vektor, dan LLM untuk menjawab pertanyaan berdasarkan berita yang dimasukkan pengguna.
 
 ---
 
-## 🧠 Komponen RAG
+##  Komponen RAG
 
 | Komponen | Teknologi yang Digunakan |
 |----------|--------------------------|
@@ -16,7 +16,7 @@ Menggabungkan kemampuan pencarian semantik, basis data vektor, dan LLM untuk men
 
 ---
 
-## ✨ Fitur Utama
+##  Fitur Utama
 
 - **5 metode input berita**:
   1. Teks manual (copy-paste)
@@ -35,7 +35,7 @@ Menggabungkan kemampuan pencarian semantik, basis data vektor, dan LLM untuk men
 
 ---
 
-## 🔧 Prasyarat
+##  Prasyarat
 
 - **Python 3.10+**
 - **Akun Kaggle** (untuk menjalankan notebook) atau lingkungan lokal dengan akses internet
@@ -46,7 +46,7 @@ Menggabungkan kemampuan pencarian semantik, basis data vektor, dan LLM untuk men
 
 ---
 
-## 🚀 Cara Menjalankan
+##  Cara Menjalankan
 
 ### 1. Clone repository
 
@@ -70,11 +70,11 @@ pip install -U google-genai chromadb beautifulsoup4 requests tenacity groq cloud
 - **Di lokal**: atur environment variable atau gunakan file `.env` (jangan hardcode di kode).
 ---
 
-## 🚀 4. Jalankan notebook
+##  4. Jalankan notebook
 
 Buka `final-project-expert-system-kelompok3.ipynb` di **Kaggle/Colab**, lalu jalankan semua sel secara berurutan (**Run All**).
 
-## 🖥️ 5. Gunakan antarmuka
+##  5. Gunakan antarmuka
 
 1. **CLI**: jalankan sel yang berisi `chat_news()`.
 2. **Gradio**: jalankan sel yang berisi `demo.launch(share=True)`.  
@@ -82,7 +82,7 @@ Buka `final-project-expert-system-kelompok3.ipynb` di **Kaggle/Colab**, lalu jal
 ---
 
 
-## 📁 Struktur File (Notebook)
+##  Struktur File (Notebook)
 
 | Sel | Isi |
 |-----|------|
@@ -100,7 +100,7 @@ Buka `final-project-expert-system-kelompok3.ipynb` di **Kaggle/Colab**, lalu jal
 | 18–20 | Antarmuka Gradio web |
 
 ---
-## 🖥️ Contoh Penggunaan (Gradio)
+## Contoh Penggunaan (Gradio)
 
 Setelah menjalankan sel Gradio (`demo.launch(share=True)`), buka link publik (misal `https://xxxx.gradio.live`). Antarmuka akan menampilkan beberapa tab.
 
@@ -118,7 +118,7 @@ Setelah menjalankan sel Gradio (`demo.launch(share=True)`), buka link publik (mi
 
 Setelah berita tersimpan, langsung beralih ke tab **Tanya Berita** untuk mengajukan pertanyaan.
 
-## 📌 Catatan Teknis
+##  Catatan Teknis
 
 - **Chunking**: ukuran 900 karakter dengan overlap 150 untuk menjaga konteks agar tidak terputus.
 - **Retrieval**: mengambil 5 chunk teratas, lalu reranking (urut ulang) ambil 3 terdekat berdasarkan jarak kemiripan.
@@ -130,7 +130,7 @@ Setelah berita tersimpan, langsung beralih ke tab **Tanya Berita** untuk mengaju
 - **Hash duplikat**: setiap konten di-hash MD5, disimpan di metadata Chroma, dicek sebelum insert.
 - **Prioritas berita terakhir**: variabel global `last_added_content` memastikan sistem menjawab dari berita yang baru diinput tanpa harus mencari database.
 
-## 🤝 Kontributor
+##  Kontributor
 Kelompok 3 – Final Project Expert System
 - Angginaloy, Syalom Mauren
 - Lakoy, Gyssella Viola Visya
